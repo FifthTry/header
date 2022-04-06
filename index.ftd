@@ -13,6 +13,8 @@
 -- is-mobile: true
 if: $ftd.device == mobile
 
+-- boolean sample: false
+
 
 -- ftd.column:
 width: fill
