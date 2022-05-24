@@ -1359,6 +1359,7 @@ sign-in: $sign-in-txt
 --- ftd.column:
 width: fill
 padding-vertical: $fpm.space.space-6
+if: not $parent-brand
 
 
 --- footer:
