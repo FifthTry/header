@@ -701,6 +701,8 @@ padding-bottom: $fpm.space.space-2
 
 --- ftd.row:
 width: fill
+id: selection-container
+
 
 
 --- ftd.text: $current-subsection.title
@@ -711,12 +713,21 @@ link: $current-subsection.url
 white-space: nowrap
 margin-right: 8
 
+--- ftd.row:
+if: $current-subsection.title is not null
+
+--- ftd.row:
+if: $current-page.title is not null 
+
 --- ftd.text: ->
 if: $current-page.title is not null
 role: $fpm.type.label-small
 color: $fpm.color.main.text-strong
 white-space: nowrap
 margin-right: 8
+
+
+--- container: selection-container
 
 --- ftd.text:$current-page.title 
 if: $current-page.title is not null
