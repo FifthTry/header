@@ -315,8 +315,6 @@ login-button: true
 
 
 
-
-
 -- ftd.column header:
 optional ftd.image-src site-logo:
 optional ftd.image-src brand-site-logo:
@@ -412,9 +410,7 @@ site-logo: $site-logo
 site-url: $site-url 
 site-name: $site-name
 current-url: $current-url
-parent-brand: $parent-brand
 sections: $sections
-brand-caption: $brand-caption
 pricing-cta: $pricing-cta
 current-section: $current-section
 current-page: $current-page
@@ -504,8 +500,6 @@ optional ftd.image-src site-logo:
 string site-url: 
 string current-url:
 optional string site-name:
-optional string brand-caption:
-boolean parent-brand:
 fpm.toc-item list sections:
 optional fpm.toc-item current-subsection: 
 fpm.toc-item list sub-sections:
@@ -551,19 +545,6 @@ id: left-side-top
 align: left
 width: fill
 
---- ftd.column:
-id: logo-text-container
-
---- ftd.column:
-if: not $parent-brand
-id: iddd
-
---- ftd.text:
-text: $brand-caption
-color: $fpm.color.main.text-strong
-role: $fpm.type.fine-print
-
---- container: logo-text-container
 
 --- ftd.row:
 link: $site-url
