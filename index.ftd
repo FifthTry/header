@@ -93,8 +93,6 @@ weight: 700
 
 
 
-section, sub-sections, extra
-
 -- boolean sidebar-open: false
 
 -- boolean is-mobile: false
