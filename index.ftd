@@ -1241,6 +1241,7 @@ src: $assets.files.static.up-arrow.svg
 height: auto
 width: 12
 
+
 --- container: bottom-row
 
 --- ftd.column: 
