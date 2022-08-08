@@ -1825,7 +1825,7 @@ cursor: pointer
 link: $link
 margin-top: -4
 align if not $is-mobile: center
-spacing: 20
+;spacing: 20
 
 --- ftd.text:
 if: $sign-in is not null
