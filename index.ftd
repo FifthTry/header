@@ -1010,7 +1010,7 @@ z-index: 1
 $on-click$: toggle $sidebar-open
 
 --- ftd.image:
-src: $assets.files.static.header.cross-dark.svg
+src: $assets.files.static.header.cross.svg
 height: 24
 width: auto
 anchor: window
@@ -1187,9 +1187,8 @@ menu-hover-bg: $menu-hover-bg
 
 --- ftd.row:
 width: fill
-if: $current-section.title is not null
 background-color: $fpm.color.main.background.step-2
-id: bottom-row
+id: change-container
 padding-horizontal: $fpm.space.space-5
 $on-click$: toggle $show-section 
 /$on-click-outside$: $show-section = false
@@ -1227,11 +1226,15 @@ color: $fpm.color.main.text-strong
 link: $current-page.url 
 white-space: nowrap
 
---- container: bottom-row
+--- container: change-container
 
 --- ftd.row:
 align: right
-padding-vertical: $fpm.space.space-5
+height: fill
+
+--- ftd.row:
+align: center
+width: fill
 
 --- ftd.image: 
 if: not $show-section 
@@ -1246,11 +1249,10 @@ height: auto
 width: 12
 
 
---- container: bottom-row
+--- container: change-container
 
 --- ftd.column: 
-id: items-container
-if :$show-section
+if: $show-section
 width: fill
 anchor: parent
 background-color: $fpm.color.main.background.step-2
