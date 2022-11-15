@@ -924,13 +924,13 @@ $on-click-outside$: $open = false
 --- ftd.row:
 if: $link is not null
 width: fill
-spacing: 8
 
 --- ftd.image:
 if: $icon is not null
 src: $icon
 height: 14
 width: auto
+align: center
 
 
 --- ftd.text: $title
@@ -950,13 +950,13 @@ margin-left: 10
 --- ftd.row:
 if: $link is  null
 width: fill
-spacing: 8
 
 --- ftd.image:
 if: $icon is not null
 src: $icon
 height: 14
 width: auto
+align: center
 
 
 --- ftd.text: $title
@@ -967,9 +967,10 @@ white-space: nowrap
 padding-left: 10
 color: $fpm.color.main.text
 color if $is-active:$fpm.color.main.cta-primary.base
-margin-left: 20
+;margin-left: 20
 cursor: auto
 
+--- container: ftd.main
 
 --- ftd.column:
 if: $children is empty
@@ -1718,13 +1719,14 @@ width: fill
 --- ftd.row:
 if: $obj.url is not null
 width: fill
-spacing: 8
+
 
 --- ftd.image:
 if: $obj.font-icon is not null
 src: $obj.font-icon
 height: 14
 width: auto
+align: center
 
 
 --- ftd.text: $obj.title
@@ -1748,6 +1750,8 @@ if: $obj.font-icon is not null
 src: $obj.font-icon
 height: 14
 width: auto
+align: center
+
 
 --- ftd.text: $obj.title
 color: $fpm.color.main.background.step-2
