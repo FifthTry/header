@@ -636,10 +636,6 @@ align-self: end
 ;; id: left-side -- TODO FTD 0.3
 width: fill-container
 align-self: end
-padding-vertical.px if { header-desktop.sub-sections != NULL }: 24
-margin-top.px if { header-desktop.current-subsection != NULL }: 16
-margin-top.px if { header-desktop.current-section != NULL }: 8
-
 
 -- header-item: $obj.title
 $loop$: $header-desktop.sub-sections as $obj
