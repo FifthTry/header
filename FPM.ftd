@@ -14,18 +14,18 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/header/main
 
 # Roadmap: /
 
-## Home: /
+# Home: index.html
 
+## How We Work: index.html
 
-## Payments: /
-
-## Business Operations: /
-
-## Developer Tools: /
-
-## Security: /
-
-## All Products: /
-
-#Journal: /
+- What Are We Building?: /header3/
+- Regular Meetings: /header3/
+- Demo Day: /header3/
+- One On Ones: /header3/
+- Shared Calendar: /header3/
+- Joining Formalities: /header3/
+- We Are Remote: /header3/
+- Communication Advice:
+  - No DMs: /header3/
+  - Tandem: /header3/
 
