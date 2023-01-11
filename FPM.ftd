@@ -1,7 +1,6 @@
 -- import: fpm
 
 -- fpm.package: fifthtry.github.io/header
-zip: github.com/fifthtry/header/archive/refs/heads/main.zip
 download-base-url: https://raw.githubusercontent.com/fifthtry/header/main
 
 -- fpm.dependency: fifthtry.github.io/package-doc
@@ -12,19 +11,19 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/header/main
 
 -- fpm.sitemap:
 
+# Roadmap: /
 
-# Home: index.html
+## Home: /
 
-## How We Work: index.html
 
-- What Are We Building?: index.html
-- Regular Meetings: /header3/
-- Demo Day: /header3/
-- One On Ones: /header3/
-- Shared Calendar: /header3/
-- Joining Formalities: /header3/
-- We Are Remote: /header3/
-- Communication Advice:
-  - No DMs: /header3/
-  - Tandem: /header3/
+## Payments: /
 
+## Business Operations: /
+
+## Developer Tools: /
+
+## Security: /
+
+## All Products: /
+
+#Journal: /
