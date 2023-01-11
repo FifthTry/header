@@ -5,16 +5,17 @@
 -- import: lang
 -- import: fifthtry.github.io/header/assets
 -- import: fifthtry.github.io/package-doc/code-block as cb
--- import: ps
+-- import: fifthtry.github.io/header/product-switcher as ps
 
 -- ftd.image-src site-logo: 
 light: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 dark: https://www.fifthtry.com/-/fifthtry.com/assets/images/logo-fifthtry-dark.svg
 
+-- $ps.current-product: 2
 
 -- boolean $show-section: false
 
--- boolean $sidebar-open: false
+-- boolean $sidebar-open: true
 
 -- boolean login-button: false
 
@@ -62,7 +63,7 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 logo-height: 38
-
+products: $ps.example-product
 
 
 
@@ -95,7 +96,7 @@ optional fpm.toc-item current-subsection:
 optional fpm.toc-item current-page: 
 fpm.toc-item list footer-nav: 
 fpm.toc-item list extra: 
-;; ps.product-data list products: 
+ps.product-data list products: 
 integer logo-width: 120
 integer logo-height: 38
 string link-style: regular
@@ -162,7 +163,7 @@ menu-border: $header.menu-border
 login-button: $header.login-button
 login-btn-txt: $header.login-btn-txt
 sign-in-txt: $header.sign-in-txt
-;; products: $header.products
+products: $header.products
 
 -- header-desktop:
 if: { ftd.device != "mobile" }
@@ -201,7 +202,7 @@ nav-sub-title: $header.nav-sub-title
 nav-sub-title-url: $header.nav-sub-title-url
 nav-sub-section-title: $header.nav-sub-section-title
 nav-sub-section-title-url: $header.nav-sub-section-title
-;; products: $header.products
+products: $header.products
 
 -- header-mobile:
 if: { ftd.device == "mobile" }
@@ -234,7 +235,7 @@ link-style: $header.link-style
 background: $header.background  
 text-color: $header.text-color 
 active-text-color: $header.active-text-color
-;; products: $header.products
+products: $header.products
 
 -- end: ftd.column
 
@@ -283,7 +284,7 @@ top.px: 20
 
 
 -- component menu-mobile:
-;; ps.product-data list products:
+ps.product-data list products:
 optional ftd.image-src site-logo:
 ftd.image-src menu-icon:
 string site-url: 
@@ -351,8 +352,8 @@ src: $menu-mobile.site-logo
 -- ftd.row:
 padding-top.px: 24
 
-/-- ps.switcher:
-products: $products
+-- ps.switcher:
+products: $menu-mobile.products
 
 -- end: ftd.row
 
@@ -423,7 +424,7 @@ $loop$: $footer-list as $obj
 
 
 -- component header-desktop:
-;; ps.product-data list products:
+ps.product-data list products:
 optional ftd.image-src site-logo:
 string site-url: 
 string current-url:
@@ -518,7 +519,7 @@ padding-left.px: 20
 margin-left.px: 20
 border-color: $inherited.colors.border
 
-/-- ps.switcher:
+-- ps.switcher:
 products: $header-desktop.products
 
 -- end: ftd.row
@@ -669,7 +670,7 @@ menu-hover-bg: $header-desktop.menu-hover-bg
 
 
 -- component header-mobile:
-;; ps.product-data list products: 
+ps.product-data list products: 
 ftd.image-src menu-icon:
 optional ftd.image-src site-logo:
 optional ftd.image-src brand-site-logo:
