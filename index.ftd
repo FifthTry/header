@@ -41,9 +41,6 @@ $processor$: pr.sitemap
 -- fpm.toc-item list footer-list:
 $processor$: pr.toc
 
-- legal: /legal/
-- support: /support/
-- feedback: /feedback/
 
 
 
@@ -128,15 +125,14 @@ optional string brand-caption:
 width: fill-container
 
 -- ftd.column:
+if: { $sidebar-open }
 width: fill-container
-background.solid: $header.background
+background.solid: $inherited.colors.background.overlay
+height.fixed.calc: 100vh
 ;; z-index: 10 -- TODO FTD 0.3
 
 -- mobile-sidebar:
 if: { $sidebar-open }
-
--- ftd.text: 
-text: sometext
 
 -- end: ftd.column
 
@@ -360,6 +356,10 @@ products: $products
 
 -- end: ftd.row
 
+-- end: ftd.column
+
+-- end: ftd.row
+
 -- ftd.column:
 if: { !is_empty(menu-mobile.sections) }
 width: fill-container
@@ -408,8 +408,6 @@ title: $obj.title
 $loop$: $footer-list as $obj
 
 -- end: ftd.column
-
--- end: ftd.row
 
 -- end: ftd.column
 
@@ -727,8 +725,8 @@ spacing.px: 16
 -- ftd.image:
 src: $header-mobile.menu-icon
 width.fixed.px: 24
-;; $on-click$: $ftd.toggle(a = $sidebar-open) -- TODO FTD 0.3
 align-self: center
+;; $on-click$: $ftd.toggle($a = $sidebar-open) -- TODO FTD 0.3 
 
 -- ftd.image:
 ;; if: { header-mobile.site-logo != NULL } -- TODO FTD 0.3
