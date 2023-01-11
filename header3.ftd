@@ -6,9 +6,9 @@
 
 -- boolean $sidebar-open: false
 
--- boolean login-button: false
+-- boolean login-button: true
 
--- boolean pricing-cta: false
+-- boolean pricing-cta: true
 
 -- string site-url: index.html
 
@@ -465,9 +465,6 @@ align-self: start
 width: fill-container
 
 -- ftd.column:
-;; id: logo-text-container -- TODO FTD 0.3
-
--- ftd.column:
 if: { !header-desktop.parent-brand }
 ;; id: iddd -- TODO FTD 0.3
 
@@ -504,8 +501,6 @@ site-name: $header-desktop.site-name
 
 -- end: ftd.row
 
--- end: ftd.column
-
 -- ftd.row:
 width: fill-container
 border-left-width.px: 1
@@ -517,6 +512,7 @@ border-color: $inherited.colors.border
 products: $header-desktop.products
 
 -- end: ftd.row
+
 
 -- end: ftd.row
 
@@ -552,26 +548,32 @@ sign-in: $header-desktop.sign-in-txt
 
 -- end: ftd.row
 
--- ftd.row:
-width: fill-container
-background.solid: $inherited.colors.background.step-1
-padding-horizontal.px: 148
+-- end: ftd.row
+
+-- end: ftd.row
 
 -- ftd.row:
 width: fill-container
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 24
+padding-horizontal.px: 48
+
+-- ftd.row:
+width: fill-container
+align-self: start
 ;; id: bottom-row -- TODO FTD 0.3
 
 -- ftd.column:
 if: { header-desktop.current-section != NULL }
 width: fill-container
-padding-vertical.px: 24
 
 -- ftd.text: $header-desktop.current-section.title
 if: { header-desktop.current-section.title != NULL }
-role: $inherited.types.heading-small
+role: $inherited.types.copy-large
 color: $inherited.colors.text-strong
 link: $header-desktop.current-section.url
 padding-bottom.px: 8
+
 
 -- ftd.row:
 width: fill-container
@@ -613,6 +615,13 @@ margin-right.px: 8
 
 -- end: ftd.column
 
+-- end: ftd.row
+
+
+-- ftd.row:
+width: hug-content
+align-self: end
+
 -- ftd.column:
 ;; id: left-side -- TODO FTD 0.3
 width: fill-container
@@ -621,9 +630,6 @@ padding-vertical.px if { header-desktop.sub-sections != NULL }: 24
 margin-top.px if { header-desktop.current-subsection != NULL }: 16
 margin-top.px if { header-desktop.current-section != NULL }: 8
 
--- ftd.row:
-width: hug-content
-align-self: end
 
 -- header-item: $obj.title
 $loop$: $header-desktop.sub-sections as $obj
@@ -639,9 +645,9 @@ menu-border: $header-desktop.menu-border
 menu-hover-bg: $header-desktop.menu-hover-bg
 ;; icon: $obj.font-icon -- TODO FTD 0.3
 
--- end: ftd.row
-
 -- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -1025,7 +1031,7 @@ max-height.fixed.px: 20
 min-height.fixed.px: 20
 
 -- ftd.text: $header-item.title
-role: $inherited.types.copy-relaxed
+role: $inherited.types.copy-large
 link: $header-item.link
 white-space: nowrap
 padding-left.px: 10
@@ -1037,7 +1043,7 @@ margin-left.px: 10
 
 -- ftd.text: $header-item.title
 if: { header-item.link == NULL }
-role: $inherited.types.copy-relaxed
+role: $inherited.types.copy-large
 white-space: nowrap
 padding-left.px: 10
 color: $header-item.text-color
