@@ -12,13 +12,12 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/header/main
 
 -- fpm.sitemap:
 
-# Roadmap: /
 
 # Home: index.html
 
 ## How We Work: index.html
 
-- What Are We Building?: /header3/
+- What Are We Building?: index.html
 - Regular Meetings: /header3/
 - Demo Day: /header3/
 - One On Ones: /header3/
