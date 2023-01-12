@@ -788,7 +788,7 @@ background.solid: $inherited.colors.background.step-1
 ;; id: bottom-row -- TODO FTD 0.3
 
 -- ftd.row:
-width: hug-content
+width: fill-container
 
 -- ftd.row:
 align-self: start
