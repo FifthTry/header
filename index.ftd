@@ -63,7 +63,7 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 logo-height: 38
-;; products: $ps.example-product
+products: $ps.example-product
 
 
 
