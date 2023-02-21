@@ -569,7 +569,6 @@ sign-in: $header-desktop.sign-in-txt
 -- end: ftd.row
 
 -- ftd.row:
-if: { header-desktop.show-sections }
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 24
@@ -586,6 +585,7 @@ align-self: center
 
 
 -- ftd.column:
+if: { header-desktop.show-sections }
 width: fill-container
 
 -- ftd.text: $header-desktop.current-section.title
