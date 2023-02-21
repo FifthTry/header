@@ -117,7 +117,7 @@ string width: 100
 boolean include-dark-mode-switcher: true
 boolean include-language-switcher: true
 optional string brand-caption:
-optional integer max-width: 1440
+optional integer max-width: 1400
 optional boolean show-sections: true
 
 -- ftd.column:
