@@ -117,6 +117,8 @@ string width: 100
 boolean include-dark-mode-switcher: true
 boolean include-language-switcher: true
 optional string brand-caption:
+optional integer max-width: 1440
+optional boolean show-sections: true
 
 -- ftd.column:
 width: fill-container
@@ -201,6 +203,8 @@ nav-sub-title-url: $header.nav-sub-title-url
 nav-sub-section-title: $header.nav-sub-section-title
 nav-sub-section-title-url: $header.nav-sub-section-title
 products: $header.products
+max-width: $header.max-width
+show-sections: $header.show-sections
 
 
 -- header-mobile:
@@ -447,7 +451,7 @@ integer logo-height: 44
 string link-style:
 optional string login-btn-txt:
 optional string sign-in-txt: 
-ftd.color background:  
+ftd.color background: $inherited.colors.background.base
 ftd.color text-color:
 ftd.color active-text-color:
 ftd.color menu-bg:
@@ -462,15 +466,19 @@ optional string nav-sub-title:
 optional string nav-sub-title-url:
 optional string nav-sub-section-title:
 optional string nav-sub-section-title-url:
+optional integer max-width: 
+optional boolean show-sections: true
 
 -- ftd.column:
 width: fill-container
-background.solid: $inherited.colors.background.base
+background.solid: $header-desktop.background
+align-content: center
 
 -- ftd.row:
 width: fill-container
 padding-vertical.px: 24
-padding-horizontal.px: 48
+;;padding-horizontal.px: 48
+max-width.fixed.px: $header-desktop.max-width
 
 -- ftd.row:
 align-self: start
@@ -524,13 +532,11 @@ products: $header-desktop.products
 
 -- end: ftd.row
 
-
 -- end: ftd.row
 
 -- ftd.row:
 align-self: center
 padding-top.px: 6
-
 
 -- header-item: $obj.title
 $loop$: $header-desktop.sections as $obj
@@ -563,17 +569,23 @@ sign-in: $header-desktop.sign-in-txt
 -- end: ftd.row
 
 -- ftd.row:
+if: { header-desktop.show-sections }
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 24
-padding-horizontal.px: 48
+;;padding-horizontal.px: 48
+align-content: center
 
 -- ftd.row:
 width: fill-container
-align-self: start
+max-width.fixed.px: $header-desktop.max-width
+
+-- ftd.row:
+width: fill-container
+align-self: center
+
 
 -- ftd.column:
-if: { header-desktop.current-section != NULL }
 width: fill-container
 
 -- ftd.text: $header-desktop.current-section.title
@@ -645,6 +657,8 @@ menu-link-active: $header-desktop.menu-link-active
 menu-border: $header-desktop.menu-border
 menu-hover-bg: $header-desktop.menu-hover-bg
 ;; icon: $obj.font-icon -- TODO FTD 0.3
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -771,7 +785,6 @@ if: { header-mobile.pricing-cta }
 -- end: ftd.row
 
 -- ftd.row:
-;; if: { header-mobile.current-section != NULL }
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 
@@ -1174,6 +1187,7 @@ ftd.color menu-border:
 boolean $open: false
 
 -- ftd.column:
+if: { !ftd.is_empty(header-item-mobile-view.children) }
 $on-click$: $ftd.toggle($a = $header-item-mobile-view.open)
 $on-click-outside$: $ftd.set-bool($a = $header-item-mobile-view.open, v = false)
 
