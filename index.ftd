@@ -259,10 +259,6 @@ default: Default
 type: Integer
 default: Default
 
--- site-doc.table-of-property: `products`
-type: Record
-default: Default
-
 -- end: site-doc.property-header
 
 -- end: site-doc.component-doc
