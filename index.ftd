@@ -6,6 +6,9 @@
 -- import: fifthtry.github.io/package-doc/forest-theme as ft
 -- import: fifthtry.github.io/package-doc/code-block as cb
 -- import: fifthtry.github.io/package-doc/footer
+-- import: fastn-community.github.io/opensans-typography as typo
+-- import: fastn-community.github.io/winter-cs
+-- import: fastn-community.github.io/site-doc
 
 
 -- ftd.image-src site-logo: 
@@ -40,67 +43,17 @@ $processor$: pr.toc
 
 
 
+-- site-doc.doc-home: Component Page
+github-url: https://fifthtry.github.io/header
+color-scheme: fastn-community.github.io/winter-cs
+typography: fastn-community.github.io/opensans-typography
+current-package: fifthtry.github.io/header
+show-tabs: true
 
 
--- ft.page:
-site-name: Header
-show-footer: true
-
--- ft.page.footer:
-
--- footer.fastn-footer:
-
--- end: ft.page.footer
-
-
--- pd.package: Header
-name: fifthtry.github.io/header
-
-The `Header` package(fifthtry.github.io/header). Use inside `FTD` files
-for your web pages.
-
-The `header` component is already included inside
-[`doc-site`](fifthtry.github.io/doc-site). If you are using `doc-site` then 
-don't add header as fastn dependency.
-
-How to use?
-
--- cb.code: Add this to your FASTN.ftd
-lang: ftd
-
-\-- fastn.dependency: fifthtry.github.io/header
-
-\-- fastn.auto-import: fifthtry.github.io/header
-
-
--- pd.component: `header.header` Basic usage example
-name: `-- header.header:`
-
-Use below code snippet to use this header component. Update `site-logo`,
-`site-name` or `site-url` as per your preferences.
-
--- cb.rendered:
-
--- cb.rendered.input:
-
-\-- header:
-login-button: $header.login-button
-pricing-cta: $header.pricing-cta
-login-btn-txt: Login
-sign-in-txt:  Sign-in
-sections: $sitemap.sections
-sub-sections: $sitemap.subsections
-current-section: $sitemap.current-section
-current-subsection: $sitemap.current-subsection
-current-page: $sitemap.current-page
-toc: $sitemap.toc
-extra: $header.extra
-site-logo: $header.site-logo
-site-url: $header.site-url
-site-name: $header.site-name
-products: $ps.example-product
-
--- cb.rendered.output:
+-- site-doc.output:
+types: $typo.types
+colors: $winter-cs.main
 
 -- header:
 login-button: $login-button
@@ -113,24 +66,148 @@ current-section: $sitemap.current-section
 current-subsection: $sitemap.current-subsection
 current-page: $sitemap.current-page
 toc: $sitemap.toc
-extra: $extra
 site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 logo-height: 38
-products: $ps.example-product
+products: $ps.example-product 
 
--- end: cb.rendered.output
+-- end: site-doc.output
 
--- end: cb.rendered
+-- site-doc.component-doc: `header`
+package-link: https://fifthtry.github.io/header
+github-link: https://fifthtry.github.io/header
+package-name: fifthtry.github.io/header
+info: `-- header` can be used as header on your fastn web projects.
 
--- ftd.column:
-height.fixed.px: 300
+The `Header` package(fifthtry.github.io/header). Use inside `FASTN` files
+for your web pages.
 
--- end: ftd.column
+The `header` component is already included inside
+[`doc-site`](fifthtry.github.io/doc-site). If you are using `doc-site` then 
+don't add header as fastn dependency.
 
--- end: ft.page
+-- cb.code:
+lang: ftd
 
+\-- fastn.dependency: fifthtry.github.io/header
+\-- fastn.auto-import: fifthtry.github.io/header as	 header 		
+
+-- site-doc.header: Invocation:
+
+-- cb.code:
+lang: ftd
+
+\-- header.header:
+site-logo: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
+site-url: /
+site-name: Header
+sections: $sitemap.sections
+sub-sections: $sitemap.subsections
+current-section: $sitemap.current-section
+current-subsection: $sitemap.current-subsection
+current-page: $sitemap.current-page
+toc: $sitemap.toc
+products: $ps.example-product 
+
+-- site-doc.header: Properties:
+
+Below are details of all properties of this component.
+
+-- site-doc.component-property: `site-logo`
+
+This is a default optional property of the `header` component. It’s used to add a
+site logo to `header` component.
+
+-- site-doc.component-property: `site-url`
+
+This is a default property of the `header` component. It’s used to add a link to click to site logo or site-name.
+
+-- site-doc.component-property: `site-name`
+
+This is a default optional property of the `site-name` component. It’s used to add a
+site name to `header` component.
+
+-- site-doc.component-property: `sections`
+
+This is a default property of the `header` component. Using `sitemap processor` or `toc processor` we can added sections to `header` component.
+
+-- site-doc.component-property: `sub-sections`
+
+This is a default property of the `header` component. Using `sitemap processor` or `toc processor` we can added sub-sections to `header` component.
+
+-- site-doc.component-property: `toc`
+
+This is a default property of the `header` component. Using `sitemap processor` or `toc processor` we can added toc to `header` component.
+
+-- site-doc.component-property: `current-section`
+
+This is a default property of the `header` component. Using `sitemap processor`we can added current-section to `header` component.
+
+-- site-doc.component-property: `current-subsection`
+
+This is a default property of the `header` component. Using `sitemap processor`we can added current-subsection to `header` component.
+
+-- site-doc.component-property: `current-page`
+
+This is a default property of the `header` component. Using `sitemap processor`we can added current-page to `header` component.
+
+-- site-doc.component-property: `products`
+
+This is a default property of the `header` component. Added dependency `fifthtry.github.io/product-switcher` in FASTN.ftd. We can added products to `header` component.
+
+-- site-doc.header: Properties at a glance:
+
+Below table shows all properties at a glance and its default types of this
+component.
+
+-- site-doc.property-header:
+
+-- site-doc.table-of-property: `site-logo`
+type:  ftd.image-src 
+default: Optional
+
+-- site-doc.table-of-property: `site-name`
+type: String
+default: Optional
+
+-- site-doc.table-of-property: `site-url`
+type: String
+default: Default
+
+-- site-doc.table-of-property: `sections`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `sub-sections`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `toc`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `current-section`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `current-subsection`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `current-page`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `products`
+type: Record
+default: Default
+
+-- end: site-doc.property-header
+
+-- end: site-doc.component-doc
+
+-- end: site-doc.doc-home
 
 
 

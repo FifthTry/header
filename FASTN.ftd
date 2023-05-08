@@ -5,21 +5,17 @@
 -- fastn.dependency: fifthtry.github.io/package-doc
 ;; -- fastn.dependency: fifthtry.github.io/dark-mode-switcher as dms
 ;; -- fastn.dependency: fifthtry.github.io/language-switcher as lang
+-- fastn.dependency: fastn-community.github.io/site-doc
 -- fastn.dependency: fifthtry.github.io/product-switcher 
-
+-- fastn.dependency: fastn-community.github.io/winter-cs
+-- fastn.dependency: fastn-community.github.io/opensans-typography as typo
 
 
 -- fastn.sitemap:
 
 # Home: /
 
-- Toc-Item - 1: /
-- Toc-Item - 2: /
-
-## Sub-Section - 1: /
-
-## Sub-Section - 2: /
-
+- Site Doc: /
 
 # Github
   url: https://github.com/FifthTry/header/
