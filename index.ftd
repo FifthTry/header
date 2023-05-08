@@ -41,7 +41,7 @@ $processor$: pr.toc
 
 
 
--- site-doc.doc-home: Component Page
+-- site-doc.doc-home: Header Documentation
 github-url: https://fifthtry.github.io/header
 color-scheme: fastn-community.github.io/winter-cs
 typography: fastn-community.github.io/opensans-typography
