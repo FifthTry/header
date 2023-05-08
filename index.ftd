@@ -111,65 +111,54 @@ Below are details of all properties of this component.
 
 -- site-doc.component-property: `site-logo`
 
-This is a default optional property of the 
-`header` component. It’s used to add a
-site logo to `header` component.
+It’s used to add a site logo to 
+`header` component.
 
 -- site-doc.component-property: `site-url`
 
-This is a default property of the `header` 
-component. It’s used to add a link to click
+It’s used to add a link to click
 to site logo or site-name.
 
 -- site-doc.component-property: `site-name`
 
-This is a default optional property of the 
-`site-name` component. It’s used to add a
-site name to `header` component.
+It’s used to add a site name to `header` component.
 
 -- site-doc.component-property: `sections`
 
-This is a default property of the `header` 
-component. Using `sitemap processor` or 
+Using `sitemap processor` or 
 `toc processor` we can added sections to 
 `header` component.
 
 -- site-doc.component-property: `sub-sections`
 
-This is a default property of the `header` 
-component. Using `sitemap processor` or 
+Using `sitemap processor` or 
 `toc processor` we can added sub-sections
 to `header` component.
 
 -- site-doc.component-property: `toc`
 
-This is a default property of the `header` 
-component. Using `sitemap processor` or 
+Using `sitemap processor` or 
 `toc processor` we can added toc to 
 `header` component.
 
 -- site-doc.component-property: `current-section`
 
-This is a default property of the `header` 
-component. Using `sitemap processor`we can 
+Using `sitemap processor`we can 
 added current-section to `header` component.
 
 -- site-doc.component-property: `current-subsection`
 
-This is a default property of the `header` 
-component. Using `sitemap processor`we can 
+Using `sitemap processor`we can 
 added current-subsection to `header` component.
 
 -- site-doc.component-property: `current-page`
 
-This is a default property of the `header` 
-component. Using `sitemap processor`we can 
+Using `sitemap processor`we can 
 added current-page to `header` component.
 
 -- site-doc.component-property: `products`
 
-This is a default property of the `header` 
-component. Added dependency 
+Added dependency 
 `fifthtry.github.io/product-switcher` 
 in FASTN.ftd. We can added products to 
 `header` component.
