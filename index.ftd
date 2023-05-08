@@ -112,6 +112,7 @@ login-button: false
 pricing-cta: false
 login-btn-txt: Login
 sign-in-txt:  Sign-in 
+logo-height: 38
 
 -- site-doc.header: Properties:
 
@@ -166,10 +167,29 @@ added current-page to `header` component.
 
 -- site-doc.component-property: `products`
 
-Added dependency 
-`fifthtry.github.io/product-switcher` 
+Added dependency `fifthtry.github.io/product-switcher` 
 in FASTN.ftd. We can added products to 
 `header` component.
+
+-- site-doc.component-property: `login-button`
+
+It’s used to add a login button to `header` component.
+
+-- site-doc.component-property: `pricing-cta`
+
+It’s used to add a pricing button to `header` component.
+
+-- site-doc.component-property: `login-btn-txt`
+
+It’s used to add a login button text to `header` component.
+
+-- site-doc.component-property: `sign-in-txt`
+
+It’s used to add a sign-in button text to `header` component.
+
+-- site-doc.component-property: `logo-height`
+
+It’s used to add a height to logo to `header` component.
 
 -- site-doc.header: Properties at a glance:
 
@@ -213,6 +233,30 @@ default: Default
 
 -- site-doc.table-of-property: `current-page`
 type: Record
+default: Default
+
+-- site-doc.table-of-property: `products`
+type: Record
+default: Default
+
+-- site-doc.table-of-property: `pricing-cta`
+type: Boolean
+default: Default
+
+-- site-doc.table-of-property: `login-button`
+type: Boolean
+default: Default
+
+-- site-doc.table-of-property: `sign-in-txt`
+type: String
+default: Default
+
+-- site-doc.table-of-property: `login-btn-txt`
+type: String
+default: Default
+
+-- site-doc.table-of-property: `logo-height`
+type: Integer
 default: Default
 
 -- site-doc.table-of-property: `products`
