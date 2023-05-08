@@ -6,8 +6,6 @@
 -- import: fifthtry.github.io/package-doc/forest-theme as ft
 -- import: fifthtry.github.io/package-doc/code-block as cb
 -- import: fifthtry.github.io/package-doc/footer
--- import: fastn-community.github.io/opensans-typography as typo
--- import: fastn-community.github.io/winter-cs
 -- import: fastn-community.github.io/site-doc
 
 
@@ -50,10 +48,7 @@ typography: fastn-community.github.io/opensans-typography
 current-package: fifthtry.github.io/header
 show-tabs: true
 
-
 -- site-doc.output:
-types: $typo.types
-colors: $winter-cs.main
 
 -- header:
 login-button: $login-button
@@ -232,17 +227,6 @@ default: Default
 -- end: site-doc.component-doc
 
 -- end: site-doc.doc-home
-
-
-
-
-
-
-
-
-
-
-
 
 
 
