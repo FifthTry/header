@@ -66,6 +66,10 @@ site-url: $site-url
 site-name: $site-name
 logo-height: 38
 products: $ps.example-product 
+login-button: $login-button
+pricing-cta: $pricing-cta
+login-btn-txt: Login
+sign-in-txt:  Sign-in
 
 -- end: site-doc.output
 
@@ -103,7 +107,11 @@ current-section: $sitemap.current-section
 current-subsection: $sitemap.current-subsection
 current-page: $sitemap.current-page
 toc: $sitemap.toc
-products: $ps.example-product 
+products: $ps.example-product
+login-button: false
+pricing-cta: false
+login-btn-txt: Login
+sign-in-txt:  Sign-in 
 
 -- site-doc.header: Properties:
 
