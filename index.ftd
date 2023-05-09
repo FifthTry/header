@@ -333,8 +333,8 @@ sign-in-txt: $header.sign-in-txt
 products: $header.products
 $show-section: $header.show-section
 
+-- ftd.desktop:
 -- header-desktop:
-if: { ftd.device != "mobile" }
 site-logo: $header.site-logo
 site-url: $header.site-url 
 site-name: $header.site-name
@@ -353,8 +353,12 @@ login-btn-txt: $header.login-btn-txt
 sign-in-txt: $header.sign-in-txt 
 products: $header.products
 
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
 -- header-mobile:
-if: { ftd.device == "mobile" }
 site-logo: $header.site-logo
 $sidebar-open: $header.sidebar-open
 brand-site-logo: $header.brand-site-logo
@@ -375,6 +379,8 @@ logo-width: $header.logo-width
 logo-height: $header.logo-height 
 products: $header.products
 $show-section: $header.show-section
+
+-- end: ftd.mobile
 
 -- end: ftd.column
 
@@ -1446,17 +1452,24 @@ ftd.image-src icon-github: $assets.files.static.icon-github.svg
 -- ftd.row:
 width: fill-container
 
+-- ftd.desktop:
+
 -- login-signup-desktop:
-if: { ftd.device != "mobile" }
 login: $login-signup.login
 sign-in: $login-signup.sign-in
 icon-github: $login-signup.icon-github
 
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
 -- login-signup-mobile:
-if: { ftd.device == "mobile" }
 login: $login-signup.login
 sign-in: $login-signup.sign-in
 icon-github: $login-signup.icon-github
+
+-- end: ftd.mobile
 
 -- end: ftd.row
 
