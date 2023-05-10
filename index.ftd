@@ -259,11 +259,11 @@ default: Default
 
 -- site-doc.table-of-property: `logo-height`
 type: Integer
-default: Default
+default: Optional
 
 -- site-doc.table-of-property: `logo-width`
 type: Integer
-default: Default
+default: Optional
 
 -- end: site-doc.property-header
 
