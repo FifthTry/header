@@ -31,21 +31,19 @@ github-link: https://github.com/FifthTry/header
 package-name: fifthtry.github.io/header
 info: `-- header` can be used as header on your fastn web projects.
 
-The `Header` package(fifthtry.github.io/header). Use inside `FASTN` files
-for your web pages.
-
 The `header` component is already included inside
 [`doc-site`](fifthtry.github.io/doc-site). If you are using `doc-site` then 
 don't add header as fastn dependency.
 
--- cb.code:
+
+-- site-doc.header: How to use?
+
+-- cb.code: Add `header` dependency into your FASTN.ftd
 lang: ftd
 
 \-- fastn.dependency: fifthtry.github.io/header
 
--- site-doc.header: Invocation:
-
--- cb.code:
+-- cb.code: Import `header` into your `.ftd` file
 lang: ftd
 
 \-- import: fifthtry.github.io/header
@@ -67,8 +65,7 @@ It's used to show `fastn.sitemap` sections.
 
 -- site-doc.component-property: `site-url`
 
-It’s used to add a link to click
-to site logo or site-name.
+It’s used to add a site link to your site homepage.
 
 -- site-doc.component-property: `site-name`
 
@@ -83,9 +80,7 @@ inside `header` component `FASTN.ftd`.
 
 -- site-doc.header: Properties at a glance:
 
-Below table shows all properties at a glance 
-and its default types of this
-component.
+Below table shows all properties and its default types of this component.
 
 -- site-doc.property-header:
 
