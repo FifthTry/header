@@ -71,6 +71,7 @@ site-logo: $site-logo
 site-url: $site-url
 site-name: $site-name
 logo-height: 38
+logo-width: 120
 products: $ps.example-product 
 
 -- end: site-doc.output
@@ -115,6 +116,7 @@ login-button: false
 login-btn-txt: Login
 sign-in-txt:  Sign-in 
 logo-height: 38
+logo-width: 120
 
 -- site-doc.header: Properties:
 
@@ -188,6 +190,11 @@ It’s used to add a sign-in button text to
 -- site-doc.component-property: `logo-height`
 
 It’s used to add a height to logo to 
+`header` component. Its CSS unit is `px`
+
+-- site-doc.component-property: `logo-width`
+
+It’s used to add a width to logo to 
 `header` component. Its CSS unit is `px`
 
 -- site-doc.header: Properties at a glance:
@@ -603,8 +610,7 @@ link: $header-desktop.site-url
 -- ftd.image:
 if: { header-desktop.site-logo != NULL }
 src: $header-desktop.site-logo
-width: auto
-max-width.fixed.px: $header-desktop.logo-width
+width.fixed.px: $header-desktop.logo-width
 height.fixed.px: $header-desktop.logo-height
 align-self: center
 
