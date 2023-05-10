@@ -4,14 +4,14 @@
 -- import: fifthtry.github.io/product-switcher as ps
 -- import: fifthtry.github.io/package-doc/doc as pd
 -- import: fifthtry.github.io/package-doc/forest-theme as ft
--- import: fifthtry.github.io/package-doc/code-block as cb
+-- import: fifthtry.github.io/code-block as cb
 -- import: fifthtry.github.io/package-doc/footer
 -- import: fastn-community.github.io/site-doc
 
 
 -- ftd.image-src site-logo: 
-light: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
-dark: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
+light: https://fastn.com/-/fastn.io/images/fastn.svg
+dark: https://fastn.com/-/fastn.io/images/fastn-dark.svg
 
 -- $ps.current-product: 2
 
@@ -53,221 +53,36 @@ github-url: https://fifthtry.github.io/header
 color-scheme: \$ftd.default-colors
 typography: \$ftd.default-types
 current-package: fifthtry.github.io/header
-show-tabs: true
+show-tabs: false
+site-title: Header
 
--- site-doc.output:
 
--- header:
-login-button: $login-button
-login-btn-txt: Login
-sign-in-txt:  Sign-in
-sections: $sitemap.sections
-sub-sections: $sitemap.subsections
-current-section: $sitemap.current-section
-current-subsection: $sitemap.current-subsection
-current-page: $sitemap.current-page
-toc: $sitemap.toc
-site-logo: $site-logo
-site-url: $site-url
-site-name: $site-name
-logo-height: 38
-logo-width: 120
-products: $ps.example-product 
+-- site-doc.header: What is header?
 
--- end: site-doc.output
+A website header is the topmost section of a web page that appears above the
+main content and typically spans the entire width of the page. It often
+contains the website's logo, navigation menu, and sometimes other important
+information such as contact details or a search bar. The header is an important
+part of the website's design as it provides users with an immediate sense of
+the website's brand identity and helps them to navigate the site.
 
--- site-doc.component-doc: `header`
-package-link: https://fifthtry.github.io/header
-github-link: https://github.com/FifthTry/header
-package-name: fifthtry.github.io/header
-info: `-- header` can be used as header on your fastn web projects.
 
-The `Header` package(fifthtry.github.io/header). Use inside `FASTN` files
-for your web pages.
+-- site-doc.header: How to install fastn?
 
-The `header` component is already included inside
-[`doc-site`](fifthtry.github.io/doc-site). If you are using `doc-site` then 
-don't add header as fastn dependency.
+Please, [click here](https://fastn.io/install/) to read fastn installation
+documentation.
+
+
+-- site-doc.header: How to use `header`?
+
+To use `header` add below lines into your FASTN.ftd file:
+
+To learn all types of header [click here](/docs/).
 
 -- cb.code:
 lang: ftd
 
 \-- fastn.dependency: fifthtry.github.io/header
-\-- fastn.auto-import: fifthtry.github.io/header 
-as header 		
-
--- site-doc.header: Invocation:
-
--- cb.code:
-lang: ftd
-
-\-- header.header:
-site-logo: https://www.fifthtry.com/-/fifthtry.com/images/dummy-site-logo.png
-site-url: /
-site-name: Header
-sections: $sitemap.sections
-sub-sections: $sitemap.subsections
-current-section: $sitemap.current-section
-current-subsection: $sitemap.current-subsection
-current-page: $sitemap.current-page
-toc: $sitemap.toc
-products: $ps.example-product
-login-button: false
-login-btn-txt: Login
-sign-in-txt:  Sign-in 
-logo-height: 38
-logo-width: 120
-
--- site-doc.header: Properties:
-
-Below are details of all properties of this component.
-
--- site-doc.component-property: `site-logo`
-
-It’s used to add a site logo to 
-`header` component.
-
--- site-doc.component-property: `site-url`
-
-It’s used to add a link to click
-to site logo or site-name.
-
--- site-doc.component-property: `site-name`
-
-It’s used to add a site name to `header` component.
-
--- site-doc.component-property: `sections`
-
-It's used to show `fastn.sitemap` sections.
-
--- site-doc.component-property: `sub-sections`
-
-It's used to show `fastn.sitemap` sub-sections.
-
--- site-doc.component-property: `toc`
-
-It's used to show `fastn.sitemap` toc.
-
--- site-doc.component-property: `current-section`
-
-It's used to show `fastn.sitemap` current 
-active section.
-
--- site-doc.component-property: `current-subsection`
-
-It's used to show `fastn.sitemap` current 
-active subsection.
-
--- site-doc.component-property: `current-page`
-
-It's used to show `fastn.sitemap` current 
-active page.
-
--- site-doc.component-property: `products`
-
-Its used to pass `products` record list 
-to `header` component. `products` 
-property will be passed to `product-switcher` 
-which is imported by default inside `header`
-component `FASTN.ftd`.
-
--- site-doc.component-property: `login-button`
-
-It’s used to enable login button into 
-`header` component. Login button appears at 
-the right side of header component.
-
--- site-doc.component-property: `login-btn-txt`
-
-It’s used to add a login button text to 
-`header` component.
-
--- site-doc.component-property: `sign-in-txt`
-
-It’s used to add a sign-in button text to 
-`header` component.
-
--- site-doc.component-property: `logo-height`
-
-It’s used to add a height to logo to 
-`header` component. Its CSS unit is `px`
-
--- site-doc.component-property: `logo-width`
-
-It’s used to add a width to logo to 
-`header` component. Its CSS unit is `px` and default value is `120`
-
--- site-doc.header: Properties at a glance:
-
-Below table shows all properties at a glance 
-and its default types of this
-component.
-
--- site-doc.property-header:
-
--- site-doc.table-of-property: `site-logo`
-type:  ftd.image-src 
-default: Optional
-
--- site-doc.table-of-property: `site-name`
-type: String
-default: Optional
-
--- site-doc.table-of-property: `site-url`
-type: String
-default: Default
-
--- site-doc.table-of-property: `sections`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `sub-sections`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `toc`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `current-section`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `current-subsection`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `current-page`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `products`
-type: Record
-default: Default
-
--- site-doc.table-of-property: `login-button`
-type: Boolean
-default: Default
-
--- site-doc.table-of-property: `sign-in-txt`
-type: String
-default: Default
-
--- site-doc.table-of-property: `login-btn-txt`
-type: String
-default: Default
-
--- site-doc.table-of-property: `logo-height`
-type: Integer
-default: Optional
-
--- site-doc.table-of-property: `logo-width`
-type: Integer
-default: Optional
-
--- end: site-doc.property-header
-
--- end: site-doc.component-doc
 
 -- end: site-doc.doc-home
 
@@ -303,7 +118,7 @@ ps.product-data list products:
 integer logo-width: 120
 integer logo-height: 44
 optional string login-btn-txt: Login
-optional string sign-in-txt: 
+optional string login-btn-url: index.html
 boolean login-button: false
 string width: 100
 optional string brand-caption:
@@ -340,11 +155,12 @@ logo-width: $header.logo-width
 logo-height: $header.logo-height 
 login-button: $header.login-button
 login-btn-txt: $header.login-btn-txt
-sign-in-txt: $header.sign-in-txt
+login-btn-url: $header.login-btn-url
 products: $header.products
 $show-section: $header.show-section
 
 -- ftd.desktop:
+
 -- header-desktop:
 site-logo: $header.site-logo
 site-url: $header.site-url 
@@ -361,7 +177,7 @@ logo-width: $header.logo-width
 logo-height: $header.logo-height 
 login-button: $header.login-button
 login-btn-txt: $header.login-btn-txt
-sign-in-txt: $header.sign-in-txt 
+login-btn-url: $header.login-btn-url
 products: $header.products
 
 -- end: ftd.desktop
@@ -457,7 +273,7 @@ integer logo-width: 120
 integer logo-height: 44
 optional string font-family:
 optional string login-btn-txt:
-optional string sign-in-txt:  
+optional string login-btn-url:  
 boolean login-button:
 
 -- ftd.column:
@@ -541,7 +357,7 @@ padding-vertical.px: 24
 
 -- login-signup:
 login: $menu-mobile.login-btn-txt
-sign-in: $menu-mobile.sign-in-txt
+login-btn-url: $menu-mobile.login-btn-url
 
 -- end: ftd.column
 
@@ -587,7 +403,7 @@ pr.toc-item list extra:
 integer logo-width: 120
 integer logo-height: 44
 optional string login-btn-txt:
-optional string sign-in-txt: 
+optional string login-btn-url: 
 boolean login-button:
 
 -- ftd.column:
@@ -655,7 +471,6 @@ products: $header-desktop.products
 
 -- ftd.row:
 align-self: center
-padding-top.px: 6
 
 -- header-item: $obj.title
 $loop$: $header-desktop.sections as $obj
@@ -668,7 +483,7 @@ if: { header-desktop.login-button }
 
 -- login-signup:
 login: $header-desktop.login-btn-txt
-sign-in: $header-desktop.sign-in-txt
+login-btn-url: $header-desktop.login-btn-url
 
 -- end: ftd.row
 
@@ -677,6 +492,7 @@ sign-in: $header-desktop.sign-in-txt
 -- end: ftd.row
 
 -- ftd.row:
+if: { header-desktop.current-section != NULL }
 width: fill-container
 background.solid: $inherited.colors.background.step-1
 padding-vertical.px: 24
@@ -687,7 +503,6 @@ width: fill-container
 align-self: start
 
 -- ftd.column:
-if: { header-desktop.current-section != NULL }
 width: fill-container
 
 -- ftd.text: $header-desktop.current-section.title
@@ -1068,7 +883,7 @@ boolean is-active:
 boolean $open: false
 
 -- ftd.row: 
-align-self: end
+align-self: center
 $on-click$: $ftd.toggle($a = $header-item.open)
 $on-click-outside$: $ftd.set-bool($a = $header-item.open, v = false)
 
@@ -1079,6 +894,7 @@ max-height.fixed.px: 20
 min-height.fixed.px: 20
 
 -- ftd.text: $header-item.title
+if: { $header-item.title != NULL }
 role: $inherited.types.copy-small
 link: $header-item.link
 white-space: nowrap
@@ -1199,6 +1015,7 @@ $on-click$: $ftd.toggle($a = $header-item-mobile-view.open)
 $on-click-outside$: $ftd.set-bool($a = $header-item-mobile-view.open, v = false)
 
 -- ftd.text: $header-item-mobile-view.title
+if: { $header-item-mobile-view.title != NULL }
 role: $inherited.types.fine-print
 link: $header-item-mobile-view.link
 white-space: nowrap
@@ -1456,7 +1273,7 @@ width: fill-container
 
 -- component login-signup:
 optional string login:
-optional string sign-in: 
+optional string login-btn-url: 
 ftd.image-src icon-github: $assets.files.static.icon-github.svg
 
 -- ftd.row:
@@ -1466,7 +1283,7 @@ width: fill-container
 
 -- login-signup-desktop:
 login: $login-signup.login
-sign-in: $login-signup.sign-in
+login-btn-url: $login-signup.login-btn-url
 icon-github: $login-signup.icon-github
 
 -- end: ftd.desktop
@@ -1476,7 +1293,7 @@ icon-github: $login-signup.icon-github
 
 -- login-signup-mobile:
 login: $login-signup.login
-sign-in: $login-signup.sign-in
+login-btn-url: $login-signup.login-btn-url
 icon-github: $login-signup.icon-github
 
 -- end: ftd.mobile
@@ -1496,13 +1313,8 @@ icon-github: $login-signup.icon-github
 
 -- component login-signup-desktop:
 optional string login:
-optional string sign-in: 
+optional string login-btn-url: 
 optional ftd.image-src icon-github:
-
--- ftd.row:
-spacing.fixed.px: 20
-margin-top.px: -10
-width: fill-container
 
 -- ftd.row:
 width: fill-container
@@ -1513,15 +1325,9 @@ border-color: $inherited.colors.border
 
 -- ftd.text: $login-signup-desktop.login
 role: $inherited.types.copy-regular
-color: $inherited.colors.cta-primary.base
+color: $inherited.colors.text-strong
 padding-vertical.px: 10
-link: https://cdoc.fifthtry.com/initiate-github-login/
-
--- end: ftd.row
-
--- github-button:
-sign-in: $login-signup-desktop.sign-in
-icon-github: $login-signup-desktop.icon-github
+link: $login-signup-desktop.login-btn-url
 
 -- end: ftd.row
 
@@ -1538,7 +1344,7 @@ icon-github: $login-signup-desktop.icon-github
 
 -- component login-signup-mobile:
 optional string login:
-optional string sign-in: 
+optional string login-btn-url: 
 optional ftd.image-src icon-github: $assets.files.static.icon-github.svg 
 
 -- ftd.column:
@@ -1547,56 +1353,10 @@ width: fill-container
 
 -- ftd.text: $login-signup-mobile.login
 role: $inherited.types.copy-regular
-color: $inherited.colors.cta-primary.base
-link: https://cdoc.fifthtry.com/initiate-github-login/
+color: $inherited.colors.text-strong
+link: $login-signup-mobile.login-btn-url
 padding-bottom.px: 32
-
--- github-button:
-sign-in: $login-signup-mobile.sign-in
-icon-github: $login-signup-mobile.icon-github
 
 -- end: ftd.column
 
 -- end: login-signup-mobile
-
-
-
-
-
-
-
-
-
-
--- component github-button:
-optional string sign-in: 
-optional string github-cta:
-ftd.image-src icon-github: $assets.files.static.icon-github.svg 
-string link: https://github.com/apps/continuous-documentation
-
--- ftd.row:
-border-radius.px: 4
-width: hug-content
-cursor: pointer
-link: $github-button.link
-margin-top.px: -4
-align-self if { ftd.device != "mobile" }: center
-spacing.fixed.px: 20
-
--- ftd.text:
-if: { github-button.sign-in != NULL }
-text: $github-button.sign-in
-white-space: nowrap
-role: $inherited.types.copy-regular
-align-self: center
-text-align: center
-color: $inherited.colors.background.step-1
-
--- ftd.image:
-src: $github-button.icon-github
-height.fixed.px: 16
-width: hug-content
-
--- end: ftd.row
-
--- end: github-button
