@@ -19,7 +19,7 @@ site-title: Header
 -- header.header:
 sections: $header.sitemap.sections
 site-url: /docs/
-site-logo: $header.site-logo
+site-logo: $assets.files.static.fastn.svg
 
 -- end: site-doc.output
 

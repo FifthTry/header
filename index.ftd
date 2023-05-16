@@ -10,8 +10,8 @@
 
 
 -- ftd.image-src site-logo: 
-light: https://fastn.com/-/fastn.io/images/fastn.svg
-dark: https://fastn.com/-/fastn.io/images/fastn-dark.svg
+light: $assets.files.static.fastn.svg
+dark: $assets.files.static.fastn-dark.svg
 
 -- $ps.current-product: 2
 
