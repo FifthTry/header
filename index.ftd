@@ -10,8 +10,8 @@
 
 
 -- ftd.image-src site-logo: 
-light: https://fastn.com/-/fastn.io/images/fastn.svg
-dark: https://fastn.com/-/fastn.io/images/fastn-dark.svg
+light: https://fastn.com/-/fastn.com/images/fastn.svg
+dark: https://fastn.com/-/fastn.com/images/fastn-dark.svg
 
 -- $ps.current-product: 2
 
@@ -77,7 +77,7 @@ documentation.
 
 To use `header` add below lines into your FASTN.ftd file:
 
-To learn all types of header [click here](/docs/).
+To learn all types of header [click here](https://fifthtry.github.io/header/docs/).
 
 
 -- site-doc.header: How to use sitemap?
